@@ -79,11 +79,8 @@
     img, video
         max-width: 100%
         height: auto
-        margin: auto
-        vertical-align: text-bottom
-    video
-    a img
         display: block
+        margin: auto
     iframe
         border: none
     table
@@ -99,13 +96,15 @@
         padding: 10px 0
     blockquote
         position: static
-        font-family: font-serif
-        font-size: 1.1em
-        margin: 0 -20px
-        padding: 10px 20px 10px 54px
-        background: #fcfcfc
-        border-left: 4px solid #eee
-        &:before
+        font-family: font-mono
+        font-size: 0.9em
+        margin: 0 -20px 0 0
+        padding: 10px 25px
+        background: #f3f3f3
+        border-left: 4px solid #ddd
+        p, table
+            margin: 0
+        /* &:before
             top: 20px
             left: 10px
             content: "\f10d"
@@ -113,7 +112,7 @@
             font-size: 32px;
             font-family: FontAwesome
             text-align: center
-            position: static
+            position: static */
         footer
             font-size: font-size
             margin: line-height 0

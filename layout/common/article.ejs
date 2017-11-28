@@ -18,6 +18,9 @@
         <%- partial('post/gallery') %>
         <div class="article-entry" itemprop="articleBody">
         <% if (index && post.excerpt) { %>
+            <% if (post.featured_image){ %>
+                <img class="float" src="<%- post.featured_image %>">
+            <% } %>
             <p><%- post.excerpt %></p>
             <p class="article-more-link">
                 <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
@@ -28,6 +31,9 @@
                 <strong class="toc-title"><%= __('article.catalogue') %></strong>
                     <%- toc(post.content) %>
                 </div>
+            <% } %>
+            <% if (post.featured_image){ %>
+                <img class="float" src="<%- post.featured_image %>">
             <% } %>
             <%- post.content %>
         <% } %>
@@ -44,4 +50,9 @@
 
 <% if (!index) { %>
     <%- partial('comment/index') %>
+    <div class="comments-go-here"></div>
+    <script type="text/javascript"
+       src="https://schnack.ilgattosenzastivali.xyz/embed.js"
+       data-schnack-target=".comments-go-here"
+       data-schnack-slug={post.id}></script>
 <% } %>
