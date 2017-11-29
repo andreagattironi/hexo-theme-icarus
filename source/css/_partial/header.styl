@@ -68,6 +68,7 @@ $header-block-right
 #main-nav
     @extend $header-block
     @extend $header-block-left
+    padding: 0
     @media mq-mobile
         display: none
     @media mq-mini
@@ -100,7 +101,7 @@ $nav-link
     @extend $nav-link
     font-weight: 300
     font-size: 15px
-    padding: 0 10px
+    padding: 12px 10px
 
 .collapsable
     @extend $header-block
@@ -200,3 +201,15 @@ $nav-link
             &::-webkit-search-results-decoration
             &::-webkit-search-cancel-button
                 -webkit-appearance: none
+
+.desktop
+    @media mq-mini
+        display: none !important
+
+.mobile
+    @media mobile
+        display: none !important
+    @media tablet
+        display: none !important
+    @media normal
+        display: none !important

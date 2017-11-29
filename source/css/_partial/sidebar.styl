@@ -33,6 +33,8 @@
 .tagcloud
     a
         margin-right: 5px
+        &:hover
+            color: color-link !important
 
 .widget-wrap
     margin: block-margin 10px
@@ -44,6 +46,7 @@
     @extend $block-caption
     margin-bottom: 0
     padding: 15px 0 0 15px
+    color: color-title
 
 .widget
     padding: 15px 15px 5px 15px
@@ -65,6 +68,8 @@
             border-bottom: 1px solid border-color
             a
                 color: color-sidebar-text
+                &:hover
+                    color: color-link
         ul, ol
             list-style: none
             li
