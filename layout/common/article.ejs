@@ -47,12 +47,3 @@
         <%- partial('post/nav') %>
     <% } %>
 </article>
-
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-    <div class="comments-go-here"></div>
-    <script type="text/javascript"
-       src="https://schnack.ilgattosenzastivali.xyz/embed.js"
-       data-schnack-target=".comments-go-here"
-       data-schnack-slug={post.id}></script>
-<% } %>
