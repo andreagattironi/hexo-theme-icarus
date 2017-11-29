@@ -7,7 +7,7 @@ h1, h2 {
 }
 
 body.custom-background { 
-	background-image: url("/ilgattosenzastivali/images/CATpiedpoule1.gif"); 
+	background-image: url("/images/CATpiedpoule1.gif"); 
 	background-position: left top; 
 	background-size: auto; 
 	background-repeat: repeat; 
@@ -30,23 +30,6 @@ body.custom-background {
 #header a:hover {
 	background: #648f48;
 }
-
-/* VERDE */
-
-/* .article-entry a, a, #recent-post li .item-inner .item-title a:hover {
-	color: #68b800;
-}
-
-.article-title, a.article-title, a.article-title:visited, h1, h2, h3, h4, h5, h6, h1>a, h2>a, h3>a, h4>a, h5>a, h6>a, h1>a:visited, h2>a:visited, h3>a:visited, h4>a:visited, h5>a:visited, h6>a:visited, a:visited {
-	color: #60a136;
-}
-
-a:hover,
-a.article-title:hover {
-	color: #648f48;
-} */
-
-/* FINE VERDE */
 
 a > time {
 	color: inherit;
@@ -203,6 +186,10 @@ a > time {
 	border-radius: 10px;
 	border:1px solid grey;
 	overflow: hidden;
+}
+
+.sellfybanner p {
+	margin: 0 0 20px;
 }
 
 .sellfybanner img {

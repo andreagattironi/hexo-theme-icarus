@@ -128,8 +128,6 @@ $nav-link
             line-height: logo-height
 
 #search-form-wrap
-    @media mq-mini
-        display: none
     @extend $header-block
     @extend $header-block-right
     .search-form
@@ -205,11 +203,11 @@ $nav-link
 .desktop
     @media mq-mini
         display: none !important
+    @media mq-mobile
+        display: none !important
 
-.mobile
-    @media mobile
+.mobile    
+    @media mq-tablet
         display: none !important
-    @media tablet
-        display: none !important
-    @media normal
+    @media mq-normal
         display: none !important
