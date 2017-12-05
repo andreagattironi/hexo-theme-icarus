@@ -1,0 +1,38 @@
+index:
+    home: 'home'
+    search: 'Cerca'
+    archive: 'archivio'
+    category: 'categoria'
+    uncategorized: 'generico'
+    tag: 'tag'
+nav:
+    next: 'Avanti'
+    prev: 'Indietro'
+    older: 'Meno recente'
+    newer: 'Più recente'
+widget:
+    recents: 'ultimi articoli'
+    archives: 'archivi'
+    categories: 'categorie'
+    links: 'link'
+    tags: 'tag'
+    tag_cloud: 'tag'
+article:
+    more: 'Continua a leggere...'
+    comments: 'Commenti'
+    share: 'Condividi'
+    catalogue: 'Catalogo'
+profile:
+    follow: 'SEGUI'
+    post: 'articolo'
+    tag: 'tag'
+    posts: 'articoli'
+    tags: 'tag'
+insight:
+    hint: 'Cosa cerchi?'
+    posts: 'articoli'
+    pages: 'Pagine'
+    categories: 'Categorie'
+    tags: 'Tag'
+    untitled: '(Senza titolo)'
+
