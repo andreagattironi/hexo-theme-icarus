@@ -13,6 +13,7 @@ nav:
     newer: 'Más nuevo'
 widget:
     recents: 'Recientes'
+    best: 'más leídos'
     archives: 'Archivos'
     categories: 'Categorias'
     links: 'Links'

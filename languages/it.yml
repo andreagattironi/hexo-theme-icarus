@@ -12,6 +12,7 @@ nav:
     newer: 'Più recente'
 widget:
     recents: 'ultimi articoli'
+    best: 'più letti'
     archives: 'archivi'
     categories: 'categorie'
     links: 'link'

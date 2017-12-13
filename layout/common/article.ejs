@@ -19,7 +19,7 @@
         <div class="article-entry" itemprop="articleBody">
         <% if (index && post.excerpt) { %>
             <% if (post.featured_image){ %>
-                <img class="float" src="<%- post.featured_image %>">
+                <img class="float" src="<%- post.featured_image %>" alt="<%- post.title %>">
             <% } %>
             <p><%- post.excerpt %></p>
             <p class="article-more-link">
