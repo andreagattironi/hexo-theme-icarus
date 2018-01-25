@@ -9,11 +9,11 @@
                 <%- (theme.customize.logo && theme.customize.logo.enabled ? '<i class="logo"></i>':'') %>
                     <span class="site-title">Home</span>
             </a>
-            <nav id="main-nav">
+            <nav itemscope itemtype="http://www.schema.org/SiteNavigationElement" id="main-nav">
                 <% for (var i in theme.menu) { %>
-                    <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>">
+                    <span itemprop="name"><a class="main-nav-link" itemprop="url" href="<%- url_for(theme.menu[i]) %>">
                         <%= i %>
-                    </a>
+                    </a></span>
                     <% } %>
             </nav>
             <!-- <i class="collapsable fa fa-bars"></i> -->
@@ -34,10 +34,10 @@
     <div id="main-nav-mobile" class="header-sub header-inner">
         <input type="checkbox" id="menuShowHide">
         <label for="menuShowHide"></label>
-        <ul id="mainMenu">
+        <ul id="mainMenu" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
             <% for (var i in theme.menu) { %>
-                <li>
-                    <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>">
+                <li itemprop="name">
+                    <a class="main-nav-link" itemprop="url" href="<%- url_for(theme.menu[i]) %>">
                         <%= i %>
                     </a>
                 </li>

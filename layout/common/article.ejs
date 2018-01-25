@@ -1,53 +1,75 @@
-<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>"
+    itemscope itemtype="http://schema.org/<%- post.schematype %>">
+    <meta content="https://ilgattosenzastivali.it<%- post.featured_image %>" itemprop="image"/>
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <meta itemprop="name" content="Andrea Gatti"/>
+    </div>
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="https://ilgattosenzastivali.it/images/feat_gattosin.jpg">
+            <meta itemprop="width" content="200">
+            <meta itemprop="height" content="200">
+        </div>
+        <meta itemprop="name" content="Il Gatto senza Stivali">
+    </div>
     <div class="article-inner">
         <% if (post.banner) { %>
             <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
-            <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
-                    <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
-                        <%- partial('post/tag') %>
-                    </div>
                 <% } %>
-            </header>
-        <% } %>
-        <%- partial('post/gallery') %>
-        <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <% if (post.featured_image){ %>
-                <img class="float" src="<%- post.featured_image %>" alt="<%- post.title %>">
-            <% } %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <% if (post.featured_image){ %>
-                <img class="float" src="<%- post.featured_image %>">
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
-        <footer class="article-footer">
-            <%- partial('share/index', { post: post }) %>
-            <%- partial('comment/counter', { post: post }) %>
-        </footer>
+                    <% if (post.link || post.title) { %>
+                        <header class="article-header">
+                            <%- partial('post/title', { class_name: 'article-title' }) %>
+                                <% if (post.layout != 'page') { %>
+                                    <div class="article-meta">
+                                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
+                                            <%- partial('post/category') %>
+                                                <%- partial('post/tag') %>
+                                    </div>
+                                    <% } %>
+                        </header>
+                        <% } %>
+                            <%- partial('post/gallery') %>
+                                <div class="article-entry" itemprop="articleBody">
+                                    <% if (index && post.excerpt) { %>
+                                        <% if (post.featured_image){ %>
+                                            <img class="float" src="<%- post.featured_image %>" alt="<%- post.title %>">
+                                            <% } %>
+                                                <p>
+                                                    <%- post.excerpt %>
+                                                </p>
+                                                <p class="article-more-link">
+                                                    <a href="<%- url_for(post.path) %>#more">
+                                                        <%= __('article.more') %>
+                                                    </a>
+                                                </p>
+                                                <% } else { %>
+                                                    <% if (!index && post.toc) { %>
+                                                        <div id="toc" class="toc-article">
+                                                            <strong class="toc-title">
+                                                                <%= __('article.catalogue') %>
+                                                            </strong>
+                                                            <%- toc(post.content) %>
+                                                        </div>
+                                                        <% } %>
+                                                            <% if (post.featured_image){ %>
+                                                                <img class="float" src="<%- post.featured_image %>">
+                                                                <% } %>
+                                                                    <%- post.content %>
+                                                                        <% } %>
+                                </div>
+                                <footer class="article-footer">
+                                    <%- partial('share/index', { post: post }) %>
+                                        <%- partial('comment/counter', { post: post }) %>
+                                </footer>
     </div>
     <% if (!index) { %>
         <%- partial('post/nav') %>
-    <% } %>
+            <% } %>
+                <!-- <%-
+        popular_posts()
+    %> -->
 </article>
 
 <% if (!index) { %>
     <%- partial('comment/index') %>
-<% } %>
+        <% } %>
