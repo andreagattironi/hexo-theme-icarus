@@ -95,6 +95,11 @@ a > time {
 	font-weight: 600;
 }
 
+.thumbnail-image {
+	display: flex !important;
+	justify-content: center;
+}
+
 .magicbutton {
 	background-color:#6fba26;
 	padding:15px;
