@@ -7,7 +7,7 @@ h1, h2 {
 }
 
 body.custom-background { 
-	background-image: url("/images/pied_de_chat.gif"); 
+	background-image: url("/images/pied_de_chat.png"); 
 	background-position: left top; 
 	background-size: auto; 
 	background-repeat: repeat; 
