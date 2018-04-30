@@ -5,6 +5,14 @@
             this.page.url = '<%= page.permalink %>';
         <% } %>
         this.page.identifier = '<%= page.disqusId || page.slug %>';
+        this.callbacks.onNewComment = [function(comment) {
+              ga('send', {
+                'hitType': 'event',            // Required.
+                'eventCategory': 'Comments',   // Required.
+                'eventAction': 'New Comment',  // Required.
+                'eventLabel': 'New Comment'
+            });
+        }];
     };
     (function() { 
         var d = document, s = d.createElement('script');  
